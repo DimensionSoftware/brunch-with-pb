@@ -28,7 +28,8 @@
     "react": "~0.10.0",
     "react-router-component": "~0.18.2",
     "negotiator": "~0.4.3",
-    "after-brunch": "0.0.4"
+    "after-brunch": "0.0.4",
+    "prelude-ls": "~1.1.1"
   },
   "devDependencies": {
     "chai": "1.2.0",
