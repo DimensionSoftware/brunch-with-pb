@@ -1,25 +1,30 @@
-# What are we made of?
-#
-# config = {} # derived from environment like environ.clj
-# routes = {} # object that can be fed into express
-# model = {}  # object full of state manipulation functions
-#
-# app = new App {config, model, routes}
-#
+global <<< require \prelude-ls
+global.React = require \react/addons
+global.ReactRouter = require \react-router-component
+global.ReactAsync = require \react-async
 
 require! {
   express
-  \./app/server/config
-  \./app/server/handlers
-  \./app/server/routes
+  connect: 'express/node_modules/connect'
+  \./app/server/mw
+  \./app/server/home
+  \./app/server/logs
 }
 
-app =
-  config: config.load!
-  routes: routes
-
-exp = express!
+app = express!
+app.use connect.logger(immediate: false, format: logs.dev-format)
+app.use express.static "#__dirname/public"
+app.use home
+app.use (err, req, res, next) ->
+  console.error(err)
+  res.send 500, err.message
 
 @start-server = (port, path, cb) ->
-  exp.listen port
+  app.listen port
   cb null
+
+not-first-time = 0
+process.on \SIGUSR2, ->
+  if not-first-time++
+    console.warn '[restarting]'
+    process.exit 0
