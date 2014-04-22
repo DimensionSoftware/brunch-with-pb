@@ -11,7 +11,7 @@ exports.config =
         # Files in `vendor` directories are compiled before other files
         # even if they aren't specified in order.before.
         before: [
-          'vendor/scripts/jquery-1.8.1.min.js',
+          'vendor/scripts/react-with-addons-0.10.0.js',
         ]
 
     stylesheets:
@@ -19,12 +19,17 @@ exports.config =
         'css/app.css': /^(app|vendor)/
         'test/css/test.css': /^test/
       order:
-        before: ['vendor/styles/normalize-1.0.1.css']
-        after: ['vendor/styles/helpers.css']
+        before: []
+        after: []
 
     templates:
       joinTo: 'js/app.js'
 
   server:
     path: \main.ls
-    port: 3333
+    port: process.env.LISTEN or 8888
+
+  plugins:
+    after-brunch: [ 'kill -USR2 $PPID' ]
+    stylus:
+      plugins: ['nib']
