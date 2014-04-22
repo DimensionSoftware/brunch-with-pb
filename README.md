@@ -10,3 +10,10 @@ A brunch skeleton for single page React apps that are also capable of doing serv
 - React
 - ReactRouter
 - ReactAsync
+
+## Getting Started
+
+    brunch new gh:beppu/brunch-with-pb app
+    cd app
+    bin/start
+
