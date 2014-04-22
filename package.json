@@ -23,7 +23,12 @@
     "jade-brunch": ">= 1.0 < 1.5",
     "uglify-js-brunch": ">= 1.0 < 1.5",
     "clean-css-brunch": ">= 1.0 < 1.5",
-    "express": "~3.4.7"
+    "express": "~3.4.7",
+    "envify": "~1.2.1",
+    "react": "~0.10.0",
+    "react-router-component": "~0.18.2",
+    "negotiator": "~0.4.3",
+    "after-brunch": "0.0.4"
   },
   "devDependencies": {
     "chai": "1.2.0",
