@@ -76,7 +76,7 @@ export InitialStateAsync =
       url: path
       success: (locals) ->
         #console.log \get-initial-state-async, locals
-        $ 'head title' .html "#{locals.title} | ICEmail"
+        $ 'head title' .html "#{locals.title}"
         cb null, locals
       error: (jqxhr, status, error) ->
         $.gritter.add title: status, text: "Could not load '#path'"
