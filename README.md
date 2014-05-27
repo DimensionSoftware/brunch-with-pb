@@ -13,7 +13,7 @@ A brunch skeleton for single page React apps that are also capable of doing serv
 
 ## Getting Started
 
-    brunch new gh:beppu/brunch-with-pb app
+    brunch new gh:DimensionSoftware/brunch-with-pb app
     cd app
     bin/start
 
