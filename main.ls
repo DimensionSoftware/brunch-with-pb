@@ -7,14 +7,14 @@ require! {
   express
   connect: 'express/node_modules/connect'
   \./app/server/mw
-  \./app/server/home
+  \./app/server/pages
   \./app/server/logs
 }
 
 app = express!
 app.use connect.logger(immediate: false, format: logs.dev-format)
 app.use express.static "#__dirname/public"
-app.use home
+app.use pages
 app.use (err, req, res, next) ->
   console.error(err)
   res.send 500, err.message
