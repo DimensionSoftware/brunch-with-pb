@@ -17,3 +17,8 @@ A brunch skeleton for single page React apps that are also capable of doing serv
     cd app
     bin/start
 
+## Need High-Quality Software?
+
+[Power Bulletin FREE Forum Communities](https://powerbulletin.com "The Best Forum Software for building Communities in the Cloud!")
+
+[Dimension Software Consulting, best firm in Downtown Los Angeles](http://dimensionsoftware.com "Forward ideas. Simple tools. Groundbreaking software.")
