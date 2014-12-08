@@ -1,5 +1,5 @@
 require! {
-  shared: '../shared/helpers'
+  '../shared/helpers': shared
 }
 
 export dev-format = (tokens, req, res) ->

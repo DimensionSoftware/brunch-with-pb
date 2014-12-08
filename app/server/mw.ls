@@ -1,10 +1,9 @@
 require! {
   jade
   url
-  React: react
-  Negotiator: negotiator
-  shared: \../shared/helpers
-  \../shared/react/App
+  negotiator: Negotiator
+  '../shared/helpers': shared
+  '../shared/react/App'
 }
 
 export react = (req, res, next) ->
