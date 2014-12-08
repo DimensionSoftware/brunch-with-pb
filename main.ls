@@ -5,7 +5,7 @@ global.ReactAsync = require \react-async
 
 require! {
   express
-  connect: 'express/node_modules/connect'
+  'express/node_modules/connect': connect
   \./app/server/mw
   \./app/server/pages
   \./app/server/logs
